@@ -1,0 +1,11 @@
+package br.com.rfatctech.cleancar.core.entity;
+
+public class UsuarioEntity {
+	private Long codigo;
+	private String nome;
+	private String login;
+	private String senha;
+	private String email;
+	
+
+}

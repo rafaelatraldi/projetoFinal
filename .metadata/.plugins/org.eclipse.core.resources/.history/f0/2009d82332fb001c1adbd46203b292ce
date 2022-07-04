@@ -1,0 +1,10 @@
+package br.com.rfatctech.cleancar.core.entity;
+
+public class VeiculoEntity {
+
+	private Long codigo;
+	private String modelo;
+	private String placa;
+	private int ano;
+	
+}

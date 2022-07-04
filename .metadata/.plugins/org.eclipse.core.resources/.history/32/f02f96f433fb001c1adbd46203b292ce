@@ -1,0 +1,6 @@
+package br.com.rfatctech.cleancar.core.entity;
+
+public class CorEntity {
+	private Long codigo;
+	private String descricaoCor;
+}

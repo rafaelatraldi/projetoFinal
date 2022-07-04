@@ -1,0 +1,9 @@
+package br.com.rfatctech.cleancar.core.entity;
+
+public class RecursoEntity {
+	
+	private Long codigo;
+	private String nomeRecurso;
+	private String caminhoTela;
+
+}
