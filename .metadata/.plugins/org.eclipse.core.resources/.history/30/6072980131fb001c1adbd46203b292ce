@@ -1,9 +1,0 @@
-package br.com.rfatctech.cleancar.core.entity;
-
-public class LiberacaoEntity {
-	
-	private Long codigo;
-	private UsuarioEntity usuario;
-	private GrupoUsuarioEntity recurso;
-	
-}

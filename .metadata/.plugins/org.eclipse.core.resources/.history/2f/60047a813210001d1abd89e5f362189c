@@ -1,0 +1,20 @@
+package br.com.rfatctech.cleancar.core.service;
+import br.com.rfatctech.cleancar.core.util.NegocioException;
+
+import java.util.List;
+
+import br.com.rfatctech.cleancar.core.bo.UsuarioBO;
+import br.com.rfatctech.cleancar.core.entity.UsuarioEntity;
+
+public class UsuarioService {
+	public String salvarUsuario(UsuarioEntity usuario) throws NegocioException  {
+		System.out.println("Entrando no backend, camada service...");
+	    UsuarioBO bo = new UsuarioBO();
+	    return bo.salvarUsuario(usuario);
+	}
+	
+	public List<UsuarioEntity> listarUsuario(){
+		return new UsuarioBO().listarUsuario();
+	}
+	
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="br.com.rfatctech.cleancar.core.entity.MarcaVeiculo"/>
+    <fullyQualifiedTypeName name="br.com.rfatctech.cleancar.core.service.UsuarioService"/>
+    <fullyQualifiedTypeName name="br.com.rfatctech.cleancar.core.entity.UsuarioEntity"/>
+    <fullyQualifiedTypeName name="br.com.rfatctech.cleancar.core.bo.UsuarioBO"/>
+    <fullyQualifiedTypeName name="br.com.rfatctech.cleancar.core.util.NegocioException"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="br.com.rfatctech.cleancar.core.dao.connection.ConexaoMySQL"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

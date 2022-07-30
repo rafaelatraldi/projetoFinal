@@ -1,8 +1,0 @@
-package br.com.rfatctech.cleancar.core.entity;
-
-public class MarcaVeiculo {
-	
-	private Long codigo;
-	private Long decricaoMarca;
-
-}
