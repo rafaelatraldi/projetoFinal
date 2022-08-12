@@ -45,7 +45,7 @@ public class Principal {
 // e.printStackTrace();
 //		}
 		
-		try {
+	/*	try {
 			UsuarioEntity usuarioEncontrado = new UsuarioService().buscarUsuarioPorId(3L);
 			if(usuarioEncontrado == null) {
 				JOptionPane.showMessageDialog(null, "Não encontrou o usuario");
@@ -56,7 +56,20 @@ public class Principal {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+*/		
+		UsuarioEntity usuario = new UsuarioEntity();
+		usuario.setCodigo(8L);
+		usuario.setNome("Marcos");
+		usuario.setLogin ("rafa");
+		usuario.setSenha("1234");
+		usuario.setEmail("rafaelatraldic@gmail.com");
 		
+		try {
+			JOptionPane.showMessageDialog(null, new UsuarioService().alterarUsuario(usuario));
+		} catch (NegocioException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -25,5 +25,7 @@ public class UsuarioService {
 	public UsuarioEntity buscarUsuarioPorId(Long codigoUsuario) throws NegocioException {
 		return new UsuarioBO().buscarUsuarioPorId(codigoUsuario);
 	}
-	
+	public String alterarUsuario(UsuarioEntity usuario) throws NegocioException {
+		return new UsuarioBO().alterarUsuario(usuario);
+	}
 }

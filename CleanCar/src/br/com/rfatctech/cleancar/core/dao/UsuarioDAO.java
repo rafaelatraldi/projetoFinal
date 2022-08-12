@@ -129,7 +129,7 @@ public class UsuarioDAO {
 			if(rs.next()) {
 				usuarioEncontrado = new UsuarioEntity();
 				usuarioEncontrado.setCodigo(rs.getLong("ID_USUARIO"));
-				usuarioEncontrado.setNome(rs.getNString("NOME_USU"));
+				usuarioEncontrado.setNome(rs.getString("NOME_USU"));
 				usuarioEncontrado.setLogin(rs.getString("LOGIN_USU"));
 				usuarioEncontrado.setSenha(rs.getString("SENHA_USU"));
 				usuarioEncontrado.setEmail(rs.getString("EMAIL_USU"));
@@ -145,9 +145,35 @@ public class UsuarioDAO {
 			}catch(SQLException e) {
 				e.printStackTrace();
 			}
+		}	
+	}
+	public String alterarUsuario(UsuarioEntity usuario) throws NegocioException{
+		
+		String sql = "UPDATE USUARIO SET NOME_USU = ?, LOGIN_USU = ?, SENHA_USU = ?, EMAIL_USU = ? WHERE ID_USUARIO = ?";
+		
+		PreparedStatement ps = null;
+		
+		try {
+			ps = ConexaoMySQL.getConexao().prepareStatement(sql);
+			ps.setString(1, usuario.getNome());
+			ps.setString(2, usuario.getLogin());
+			ps.setString(3, usuario.getSenha());
+			ps.setString(4, usuario.getEmail());
+			ps.setLong(5, usuario.getCodigo());
+			
+			ps.execute();
+			
+		} catch (SQLException e) {
+			throw new NegocioException("Ocorreu um erro ao atualizar os dados de Usuário");
+		} finally {
+			try {
+				ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		
-		
+		return "O Usuário foi alterado com sucesso";
 	}
 }
 

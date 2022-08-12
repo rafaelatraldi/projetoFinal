@@ -89,6 +89,14 @@ public class TelaListaUsuario extends JFrame {
 		});
 		
 		JButton btnEditar = new JButton("Editar");
+		btnEditar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				UsuarioEntity usuarioSelecionado = usuarios.get(table.getSelectedRow());
+				TelaCadastroUsuario tcu = new TelaCadastroUsuario();
+				tcu.carregarUsuarioPorId(usuarioSelecionado.getCodigo());
+				tcu.setVisible(true);				
+			}
+		});
 		btnEditar.setEnabled(false);
 		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
