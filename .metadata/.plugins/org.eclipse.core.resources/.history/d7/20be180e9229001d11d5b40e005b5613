@@ -1,0 +1,44 @@
+package br.com.rfatctech.cleancar.core.dao;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import br.com.rfatctech.cleancar.core.dao.connection.ConexaoMySQL;
+import br.com.rfatctech.cleancar.core.entity.ClienteEntity;
+import br.com.rfatctech.cleancar.core.util.NegocioException;
+
+public class ClienteDAO {
+	public String salvarCliente(ClienteEntity cliente)  throws NegocioException{
+		
+ 		String sql = "INSERT INTO CLIENTE (NOME_CLIENTE, TELEFONE_CLIENTE, EMAIL_CLIENTE, ENDERECO_CLIENTE, CPFCPNJ_CLIENTE) VALUES (?,?,?,?,?)";
+ 		
+ 		PreparedStatement ps = null;
+ 		
+ 	try {
+		    ps = ConexaoMySQL.getConexao().prepareStatement(sql);
+			ps.setString(1, cliente.getNome());
+			ps.setString(2, cliente.getTelefone());
+			ps.setString(3, cliente.getEmail());
+			ps.setString(4, cliente.getEndereco());
+			ps.setString(5, cliente.getCpfcnpj());
+			ps.execute();
+			
+			
+	} catch (SQLException e) {	
+			e.printStackTrace();
+			throw new NegocioException("Erro ao cadastrar cliente");
+			
+		} finally {
+			if(ps != null) {
+				try {
+					ps.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		return "Cliente cadastrado com sucesso no banco de dados";
+	}
+	
+}

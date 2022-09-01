@@ -1,5 +1,30 @@
 package br.com.rfatctech.cleancar.core.service;
+import br.com.rfatctech.cleancar.core.util.NegocioException;
+
+import java.util.List;
+
+import br.com.rfatctech.cleancar.core.bo.ClienteBO;
+import br.com.rfatctech.cleancar.core.entity.ClienteEntity;
 
 public class ClienteService {
-
+	public String salvarCliente(ClienteEntity cliente) throws NegocioException  {
+		System.out.println("Entrando no backend, camada service...");
+		ClienteBO bo = new ClienteBO();
+	    return bo.salvarCliente(cliente);
+	}
+	
+	public List<ClienteEntity> listarCliente() throws NegocioException{
+		return new ClienteBO().listarCliente();
+	}
+	
+	public void excluirCliente (Long codigoCliente) throws NegocioException {
+		new ClienteBO().excluirCliente(codigoCliente);
+	}
+	
+	public ClienteEntity buscarClientePorId(Long codigoCliente) throws NegocioException {
+		return new ClienteBO().buscarClientePorId(codigoCliente);
+	}
+	public String alterarCliente(ClienteEntity cliente) throws NegocioException {
+		return new ClienteBO().alterarCliente(cliente);
+	}
 }

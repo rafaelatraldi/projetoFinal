@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.com.rfatctech.cleancar.core.view.telas.telaCadastroCliente&apos; to &apos;TelaCadastroCliente&apos;&#x0D;&#x0A;- Original project: &apos;CleanCar&apos;&#x0D;&#x0A;- Original element: &apos;br.com.rfatctech.cleancar.core.view.telas.telaCadastroCliente&apos;&#x0D;&#x0A;- Renamed element: &apos;br.com.rfatctech.cleancar.core.view.telas.TelaCadastroCliente&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;telaCadastroCliente&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;br.com.rfatctech.cleancar.core.view.telas{telaCadastroCliente.java[telaCadastroCliente" matchStrategy="1" name="TelaCadastroCliente" qualified="false" references="true" similarDeclarations="false" stamp="1661995629303" textual="false" version="1.0"/>
+</session>

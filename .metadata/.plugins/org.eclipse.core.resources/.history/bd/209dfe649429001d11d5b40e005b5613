@@ -1,0 +1,14 @@
+package br.com.rfatctech.cleancar.core.bo;
+
+import br.com.rfatctech.cleancar.core.dao.ClienteDAO;
+import br.com.rfatctech.cleancar.core.entity.ClienteEntity;
+import br.com.rfatctech.cleancar.core.util.NegocioException;
+
+public class ClienteBO {
+	public String salvarCliente(ClienteEntity cliente) throws NegocioException {
+		System.out.println("Camada BO, processando informações");
+	
+		ClienteDAO udao = new ClienteDAO();		
+		return udao.salvarCliente(cliente);
+	}
+}
