@@ -47,7 +47,7 @@ public class ClienteDAO {
 	public List<ClienteEntity> listarCliente() throws NegocioException{
 		
 		
-		String sql = "SELECT ID_CLIENTE, NOME_CLIENTE, TELEFONE_CLIENTE, EMAIL_CLIENTE, ENDERECO_CLIENTE, CPFCNPJ_CLIENTE FROM CLIENTE";
+		String sql = "SELECT ID_CLIENTE, NOME_CLIENTE, TELEFONE_CLIENTE, EMAIL_CLIENTE, ENDERECO_CLIENTE, CPFCPNJ_CLIENTE FROM CLIENTE";
 		
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -65,7 +65,7 @@ public class ClienteDAO {
 				cli.setTelefone(rs.getString("TELEFONE_CLIENTE"));
 				cli.setEmail(rs.getString("EMAIL_CLIENTE"));
 				cli.setEndereco(rs.getString("ENDERECO_CLIENTE"));
-				cli.setCpfcnpj(rs.getString("CPFCNPJ_CLIENTE"));
+				cli.setCpfcnpj(rs.getString("CPFCPNJ_CLIENTE"));
 				clientes.add(cli);
 			}
 			
@@ -110,7 +110,7 @@ public class ClienteDAO {
 	}
 	public ClienteEntity buscarClientePorId(Long codigoCliente) throws NegocioException {
 		
-		String sql = "SELECT ID_CLIENTE, NOME_CLIENTE, TELEFONE_CLIENTE, EMAIL_CLIENTE, ENDERECO_CLIENTE, CPFCNPJ_CLIENTE FROM CLIENTE WHERE ID_CLIENTE = ?";
+		String sql = "SELECT ID_CLIENTE, NOME_CLIENTE, TELEFONE_CLIENTE, EMAIL_CLIENTE, ENDERECO_CLIENTE, CPFCPNJ_CLIENTE FROM CLIENTE WHERE ID_CLIENTE = ?";
 		
 		PreparedStatement ps = null;
 		ResultSet rs=null;

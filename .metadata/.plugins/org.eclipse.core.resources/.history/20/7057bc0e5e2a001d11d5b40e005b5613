@@ -204,7 +204,7 @@ public class TelaCadastroCliente extends JFrame {
 		tfCliCpfcnpj.setText("");
 	}
 	
-	public void carregarClientePorId(Long codigoCliente) {
+	public void carregaClientePorId(Long codigoCliente) {
 		try {
 			ClienteEntity clienteEncontrado =  new ClienteService().buscarClientePorId(codigoCliente);
 			
